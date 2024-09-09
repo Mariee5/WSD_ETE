@@ -1,0 +1,45 @@
+[
+    {
+      "id": 1,
+      "title": "Introduction to Interior Design",
+      "description": "Learn the basics of interior design and space planning.",
+      "duration": "3 weeks",
+      "category": "Design"
+    },
+    {
+      "id": 2,
+      "title": "Advanced JavaScript",
+      "description": "Master JavaScript concepts and advanced techniques.",
+      "duration": "4 weeks",
+      "category": "Programming"
+    },
+    {
+      "id": 3,
+      "title": "Digital Marketing",
+      "description": "Understand the fundamentals of digital marketing.",
+      "duration": "6 weeks",
+      "category": "Marketing"
+    },
+    {
+      "id": 4,
+      "title": "Data Science with Python",
+      "description": "Dive into data analysis using Python.",
+      "duration": "8 weeks",
+      "category": "Data Science"
+    },
+    {
+      "id": 5,
+      "title": "UI/UX Design",
+      "description": "Learn the essentials of user interface and user experience design.",
+      "duration": "5 weeks",
+      "category": "Design"
+    },
+    {
+      "id": 6,
+      "title": "Machine Learning",
+      "description": "An introductory course on machine learning algorithms.",
+      "duration": "10 weeks",
+      "category": "Data Science"
+    }
+  ]
+  
