@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course List & Sign-up</title>
+    <style>
+        /* Hero section styling */
+        .hero {
+            background: url('hero-image.jpg') no-repeat center center/cover;
+            height: 50vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            font-size: 2.5rem;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Basic styling for course list and form */
+        table, th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+
+        th {
+            cursor: pointer;
+        }
+
+        input[type="text"] {
+            width: 200px;
+        }
+
+        .pagination {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .pagination button {
+            padding: 8px 16px;
+            margin: 0 4px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Welcome to Our Course Portal</h1>
+    </div>
+
+    <!-- Filter and Search -->
+    <h2>Available Courses</h2>
+    <input type="text" id="filterInput" placeholder="Search courses...">
+
+    <!-- Course List -->
+    <table>
+        <thead>
+            <tr>
+                <th onclick="sortTable(0)">Title</th>
+                <th>Description</th>
+                <th onclick="sortTable(2)">Duration</th>
+                <th onclick="sortTable(3)">Category</th>
+            </tr>
+        </thead>
+        <tbody id="courseTableBody"></tbody>
+    </table>
+
+    <!-- Pagination -->
+    <div class="pagination">
+        <button id="prevPage" onclick="prevPage()">Previous</button>
+        <button id="nextPage" onclick="nextPage()">Next</button>
+    </div>
+
+    <!-- Sign-up Form -->
+    <h2>Sign Up for Courses</h2>
+    <form id="signupForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <div id="nameError"></div>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <div id="emailError"></div>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <div id="passwordError"></div>
+
+        <button type="submit">Sign Up</button>
+    </form>
+
+    <!-- JavaScript to handle fetching data, sorting, filtering, pagination, and form validation -->
+    <script>
+        let currentPage = 1;
+        const rowsPerPage = 2;
+        let courses = [];
+
+        // Fetch and display course data
+        fetch('https://raw.githubusercontent.com/your-username/your-repo/main/courses.json')
+            .then(response => response.json())
+            .then(data => {
+                courses = data;
+                displayCourses(currentPage);
+            });
+
+        // Display course data with pagination
+        function displayCourses(page) {
+            const tableBody = document.getElementById('courseTableBody');
+            tableBody.innerHTML = '';
+            const start = (page - 1) * rowsPerPage;
+            const end = start + rowsPerPage;
+            const paginatedCourses = courses.slice(start, end);
+            paginatedCourses.forEach(course => {
+                const row = `<tr>
+                    <td>${course.title}</td>
+                    <td>${course.description}</td>
+                    <td>${course.duration}</td>
+                    <td>${course.category}</td>
+                </tr>`;
+                tableBody.innerHTML += row;
+            });
+        }
+
+        // Pagination controls
+        function nextPage() {
+            if (currentPage * rowsPerPage < courses.length) {
+                currentPage++;
+                displayCourses(currentPage);
+            }
+        }
+
+        function prevPage() {
+            if (currentPage > 1) {
+                currentPage--;
+                displayCourses(currentPage);
+            }
+        }
+
+        // Sort courses by column
+        function sortTable(columnIndex) {
+            courses.sort((a, b) => {
+                const cellA = Object.values(a)[columnIndex].toLowerCase();
+                const cellB = Object.values(b)[columnIndex].toLowerCase();
+                return cellA.localeCompare(cellB);
+            });
+            displayCourses(currentPage);
+        }
+
+        // Filter course data
+        document.getElementById('filterInput').addEventListener('keyup', function () {
+            const filterValue = this.value.toLowerCase();
+            const filteredCourses = courses.filter(course => course.title.toLowerCase().includes(filterValue));
+            const tableBody = document.getElementById('courseTableBody');
+            tableBody.innerHTML = '';
+            filteredCourses.forEach(course => {
+                const row = `<tr>
+                    <td>${course.title}</td>
+                    <td>${course.description}</td>
+                    <td>${course.duration}</td>
+                    <td>${course.category}</td>
+                </tr>`;
+                tableBody.innerHTML += row;
+            });
+        });
+
+        // Form validation
+        document.getElementById('signupForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            let valid = true;
+            const name = document.getElementById('name');
+            const email = document.getElementById('email');
+            const password = document.getElementById('password');
+            const nameError = document.getElementById('nameError');
+            const emailError = document.getElementById('emailError');
+            const passwordError = document.getElementById('passwordError');
+
+            nameError.textContent = '';
+            emailError.textContent = '';
+            passwordError.textContent = '';
+
+            if (name.value === '') {
+                nameError.textContent = 'Name is required';
+                valid = false;
+            }
+
+            const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            if (!emailPattern.test(email.value)) {
+                emailError.textContent = 'Invalid email format';
+                valid = false;
+            }
+
+            if (password.value.length < 6) {
+                passwordError.textContent = 'Password must be at least 6 characters';
+                valid = false;
+            }
+
+            if (valid) {
+                alert('Registration successful!');
+                document.getElementById('signupForm').reset();
+            }
+        });
+    </script>
+</body>
+</html>
