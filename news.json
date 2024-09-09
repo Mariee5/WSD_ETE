@@ -6,7 +6,7 @@
         "title": "Another Important Event",
         "description": "Details about another important event happening around the world.",
         "url": "https://www.bbc.com/news/world/2024/important-event",
-        "urlToImage": "https://github.com/Mariee5/WSD_ETE/blob/main/channels4_profile.jpg",
+        "urlToImage": "https://raw.githubusercontent.com/Mariee5/WSD_ETE/main/channels4_profile.jpg",
         "publishedAt": "2024-09-08T10:20:00Z",
         "content": "This is the full article content for the important event happening globally."
     },
@@ -17,7 +17,7 @@
         "title": "Breaking News",
         "description": "Latest breaking news from around the globe.",
         "url": "https://www.cnn.com/2024/09/08/breaking-news",
-        "urlToImage": "https://github.com/Mariee5/WSD_ETE/blob/main/2507239-cnn-dnc-2024-3840x2160-20240819140957448.jpg",
+        "urlToImage": "https://raw.githubusercontent.com/Mariee5/WSD_ETE/main/2507239-cnn-dnc-2024-3840x2160-20240819140957448.jpg",
         "publishedAt": "2024-09-08T11:00:00Z",
         "content": "This is the full article content for the important event happening nationally"
     },
@@ -50,7 +50,7 @@
         "title": "Cultural Highlights",
         "description": "Highlights from the world of culture and arts.",
         "url": "https://www.nytimes.com/2024/09/08/cultural-highlights",
-        "urlToImage": "https://github.com/Mariee5/WSD_ETE/blob/main/fall-winter-cultural-festivals-nyc-charter-bus-company.jpg",
+        "urlToImage": "https://raw.githubusercontent.com/Mariee5/WSD_ETE/main/fall-winter-cultural-festivals-nyc-charter-bus-company.jpg",
         "publishedAt": "2024-09-08T14:45:00Z",
         "content": "A roundup of the most notable cultural and artistic events."
     },
@@ -72,7 +72,7 @@
         "title": "Business Trends",
         "description": "Trends and insights in the business world.",
         "url": "https://www.forbes.com/business/2024/09/08/business-trends",
-        "urlToImage": "https://github.com/Mariee5/WSD_ETE/blob/main/amazon-egang-1998.jpg",
+        "urlToImage": "https://raw.githubusercontent.com/Mariee5/WSD_ETE/main/amazon-egang-1998.jpg",
         "publishedAt": "2024-09-08T16:25:00Z",
         "content": "An overview of the current trends shaping the business environment."
     }
