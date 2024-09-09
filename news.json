@@ -6,7 +6,7 @@
         "title": "Another Important Event",
         "description": "Details about another important event happening around the world.",
         "url": "https://www.bbc.com/news/world/2024/important-event",
-        "urlToImage": "https://cdn.bbc.com/news/images/important-event.jpg",
+        "urlToImage": "https://github.com/Mariee5/WSD_ETE/blob/main/channels4_profile.jpg",
         "publishedAt": "2024-09-08T10:20:00Z",
         "content": "This is the full article content for the important event happening globally."
     },
@@ -17,7 +17,7 @@
         "title": "Breaking News",
         "description": "Latest breaking news from around the globe.",
         "url": "https://www.cnn.com/2024/09/08/breaking-news",
-        "urlToImage": "https://cdn.cnn.com/news/images/breaking-news.jpg",
+        "urlToImage": "https://github.com/Mariee5/WSD_ETE/blob/main/2507239-cnn-dnc-2024-3840x2160-20240819140957448.jpg",
         "publishedAt": "2024-09-08T11:00:00Z",
         "content": "This is the full article content for the important event happening nationally"
     },
@@ -28,7 +28,7 @@
         "title": "Cultural HighLights",
         "description": "Update on the global economic situation.",
         "url": "https://www.aljazeera.com/economy/2024/09/08/global-economic-update",
-        "urlToImage": "https://cdn.aljazeera.com/news/images/global-economy.jpg",
+        "urlToImage": "https://raw.githubusercontent.com/Mariee5/WSD_ETE/main/2023-11-30T152944Z_570241706_RC2RN4AC7L92_RTRMADP_3_CLIMATE-UN-NEWS-CONFERENCE-1701361634.webp",
         "publishedAt": "2024-09-08T12:15:00Z",
         "content": "Understanding the Cutural Diversities of Dubai"
     },
@@ -39,7 +39,7 @@
         "title": "Tech Innovations",
         "description": "Recent innovations in technology and their impact.",
         "url": "https://www.reuters.com/technology/2024/09/08/tech-innovations",
-        "urlToImage": "https://cdn.reuters.com/news/images/tech-innovations.jpg",
+        "urlToImage": "https://raw.githubusercontent.com/Mariee5/WSD_ETE/main/techgig-daily-tech-news-digest-28-october.webp",
         "publishedAt": "2024-09-08T13:30:00Z",
         "content": "An overview of the latest technological advancements and their implications."
     },
@@ -50,7 +50,7 @@
         "title": "Cultural Highlights",
         "description": "Highlights from the world of culture and arts.",
         "url": "https://www.nytimes.com/2024/09/08/cultural-highlights",
-        "urlToImage": "https://cdn.nytimes.com/news/images/cultural-highlights.jpg",
+        "urlToImage": "https://github.com/Mariee5/WSD_ETE/blob/main/fall-winter-cultural-festivals-nyc-charter-bus-company.jpg",
         "publishedAt": "2024-09-08T14:45:00Z",
         "content": "A roundup of the most notable cultural and artistic events."
     },
@@ -61,7 +61,7 @@
         "title": "Political Developments",
         "description": "Recent developments in the political landscape.",
         "url": "https://www.theguardian.com/world/2024/09/08/political-developments",
-        "urlToImage": "https://cdn.theguardian.com/news/images/political-developments.jpg",
+        "urlToImage": "https://raw.githubusercontent.com/Mariee5/WSD_ETE/main/merlin_132304460_860897a0-558e-44db-a990-f652fc785411-superjumbo-sixteen_nine.webp",
         "publishedAt": "2024-09-08T15:55:00Z",
         "content": "Analysis of recent political events and their potential consequences."
     },
@@ -72,7 +72,7 @@
         "title": "Business Trends",
         "description": "Trends and insights in the business world.",
         "url": "https://www.forbes.com/business/2024/09/08/business-trends",
-        "urlToImage": "https://cdn.forbes.com/news/images/business-trends.jpg",
+        "urlToImage": "https://github.com/Mariee5/WSD_ETE/blob/main/amazon-egang-1998.jpg",
         "publishedAt": "2024-09-08T16:25:00Z",
         "content": "An overview of the current trends shaping the business environment."
     }
